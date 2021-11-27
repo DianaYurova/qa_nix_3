@@ -21,7 +21,7 @@ public class StringsRun {
                     }
                     break;
                     case "2": {
-                        new HomeWorkTask2().run(reader);
+                        new HomeWorkTask2().run();
                     }
                     break;
                     case "0": {
