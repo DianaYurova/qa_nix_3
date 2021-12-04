@@ -45,7 +45,7 @@ public class ListTest {
             }
             end = System.currentTimeMillis() - start;
             System.out.println("Finish MyDynamicArray - " + end);
-        };
+        }
 
         private void read() {
             System.out.println("Read lists");
@@ -72,7 +72,7 @@ public class ListTest {
             }
             end = System.currentTimeMillis() - start;
             System.out.println("Finish MyDynamicArray - " + end);
-        };
+        }
         private void update() {
             System.out.println("Update lists");
             System.out.println("Start arrayList");
@@ -98,7 +98,7 @@ public class ListTest {
             }
             end = System.currentTimeMillis() - start;
             System.out.println("Finish MyDynamicArray - " + end);
-        };
+        }
 
         //удалять нужно аккуратно, тк удаляя по индексу, освобождаются ячейки, джава в любой момент может принять решение
         //уменьшить размер массива, и тогда следующий в списке индекс может остаться за пределами массива
@@ -135,5 +135,5 @@ public class ListTest {
             }
             end = System.currentTimeMillis() - start;
             System.out.println("Finish MyDynamicArray - " + end);
-        };
+        }
 }
