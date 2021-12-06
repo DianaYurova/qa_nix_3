@@ -18,6 +18,8 @@ public class GenericsMain {
         customMapImpl.put(UUID.randomUUID().toString(), "value 3");
         customMapImpl.put(UUID.randomUUID().toString(), "value 4");
 
+        System.out.println("customMapImpl = " + customMapImpl);
+
         customMapImpl.setKeys();
 //        customMapImpl.listValues();
 //        customMapImpl.get();
