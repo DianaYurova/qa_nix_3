@@ -6,8 +6,10 @@ public class CustomMapImpl<K, V> implements CustomMap<K, V> {
 
     private List<Node<K, V>> nodes = new ArrayList<>();
 
+
     @Override
     public void put(K key, V value) {
+
         for (Node<K, V> node : nodes) {
             if(key.hashCode() != node.key.hashCode()) {
                 if(!key.equals(node.key)) {
