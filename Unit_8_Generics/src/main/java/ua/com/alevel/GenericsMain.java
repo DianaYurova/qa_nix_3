@@ -1,10 +1,7 @@
 package ua.com.alevel;
 
-import org.w3c.dom.Node;
 import ua.com.alevel.hw_5.CustomMapImpl;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 public class GenericsMain {
@@ -17,12 +14,25 @@ public class GenericsMain {
         customMapImpl.put(UUID.randomUUID().toString(), "value 2");
         customMapImpl.put(UUID.randomUUID().toString(), "value 3");
         customMapImpl.put(UUID.randomUUID().toString(), "value 4");
+        customMapImpl.put("somekey", "value 5");
+        customMapImpl.put("somekey", "value 6");
 
-        customMapImpl.setKeys();
-//        customMapImpl.listValues();
-//        customMapImpl.get();
+        for (String key: customMapImpl.setKeys()) {
+            System.out.println("key = " + key);
+        }
+
+        for (String value : customMapImpl.listValues()) {
+            System.out.println("value = " + value);
+        }
+
+        System.out.println("Value of key 'somekey' = " + customMapImpl.get("somekey"));
 
     }
+
+
+
+
+
 //        BeforeGenerics list = new BeforeGenerics();
 //        list.add(1);
 //        list.add(1L);

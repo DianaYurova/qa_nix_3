@@ -9,80 +9,40 @@ public class CustomMapImpl<K, V> implements CustomMap<K, V> {
     @Override
     public void put(K key, V value) {
         for (Node<K, V> node : nodes) {
-            if(key.hashCode() != node.key.hashCode()) {
-                if(!key.equals(node.key)) {
-                    nodes.add(new Node<>(key, value));
-                }
-                else {
+            if(key.hashCode() == node.getKey().hashCode()) {
+                if(key.equals(node.key)) {
                     nodes.get(nodes.indexOf(node)).setValue(value);
+                    return;
                 }
             }
         }
+        nodes.add(new Node<>(key, value));
     }
 
     @Override
     public Set<K> setKeys() {
         //как из листа Node вытащить лист K key
+        Set<K> keys = new HashSet<>();
         for (Node<K, V> node : nodes) {
-            Set<K> keys = new Set<>() {
-                @Override
-                public int size() { return 0; }
-
-                @Override
-                public boolean isEmpty() { return false; }
-
-                @Override
-                public boolean contains(Object o) { return false; }
-
-                @Override
-                public Iterator<K> iterator() { return null; }
-
-                @Override
-                public Object[] toArray() { return new Object[0]; }
-
-                @Override
-                public <T> T[] toArray(T[] a) { return null; }
-
-                @Override
-                public boolean add(K k) { return false; }
-
-                @Override
-                public boolean remove(Object o) { return false; }
-
-                @Override
-                public boolean containsAll(Collection<?> c) { return false; }
-
-                @Override
-                public boolean addAll(Collection<? extends K> c) { return false; }
-
-                @Override
-                public boolean retainAll(Collection<?> c) { return false; }
-
-                @Override
-                public boolean removeAll(Collection<?> c) { return false; }
-
-                @Override
-                public void clear() { }
-            };
-            System.out.println("keys = " + keys);
+            keys.add(node.getKey());
         }
-        return null;
+        return keys;
     }
 
     @Override
     public List<V> listValues() {
+        List<V> values = new ArrayList<>();
         for (Node<K, V> node : nodes) {
-            List<V> values = new ArrayList<>();
-            System.out.println("values = " + values);
+            values.add(node.getValue());
         }
-        return null;
+        return values;
     }
 
     @Override
     public V get(K key) {
         for (Node<K, V> node : nodes) {
             if (node.getKey().equals(key)) {
-                return node.value;
+                return node.getValue();
             }
         }
         return null;
