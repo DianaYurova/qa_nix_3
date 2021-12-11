@@ -29,10 +29,6 @@ public class GenericsMain {
 
     }
 
-
-
-
-
 //        BeforeGenerics list = new BeforeGenerics();
 //        list.add(1);
 //        list.add(1L);
