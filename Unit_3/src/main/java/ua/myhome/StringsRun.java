@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 public class StringsRun {
 
     public static void run() {
-
         System.out.println("Here program will be");
 
         preview();
@@ -36,7 +35,6 @@ public class StringsRun {
     }
 
     private static void preview() {
-
         System.out.println("Please enter 1 to launch first task");
         System.out.println("Please enter 2 to launch second task");
         System.out.println("Please enter 0 to exit task");

@@ -10,11 +10,11 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Unit_3</module>
-        <module>Practice</module>
-        <module>BookPracticeMain</module>
-        <module>BookPractice</module>
-        <module>Chapter1</module>
-        <module>Unit_7_Crud_App</module>
+<!--        <module>Practice</module>-->
+<!--        <module>BookPracticeMain</module>-->
+<!--        <module>BookPractice</module>-->
+<!--        <module>Chapter1</module>-->
+<!--        <module>Unit_7_Crud_App</module>-->
         <module>Unit_7_CRUD</module>
     </modules>
 

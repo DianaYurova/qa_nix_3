@@ -10,7 +10,6 @@ public class CustomerServiceImplementation implements CustomerService {
 
     private final CustomerDao customerDao = new CustomerDaoImplementation();
 
-
     @Override
     public void create(Customer customer) {
         if (!customerDao.existByPassportNumber(customer.getPassportNumber())) {
@@ -19,7 +18,6 @@ public class CustomerServiceImplementation implements CustomerService {
         else {
             System.out.println("This passport number already exists");
         }
-
     }
 
     @Override

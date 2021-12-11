@@ -12,5 +12,4 @@ public interface CustomerService {
     Customer findById(String id);
     List<Customer> findAll();
     boolean existByPassportNumber(String passportnumber);
-
 }
